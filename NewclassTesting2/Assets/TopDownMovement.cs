@@ -10,6 +10,7 @@ public class TopDownMovement: MonoBehaviour
     public Rigidbody2D body;
     public Potions Potion;
     public float potSelect;
+    public PotionEffects HeldEffects;
     // Start is called before the first frame update
     //Attatch this to The Player, but make sure it has a rigidbody2D attatched.
     void Start()
@@ -42,7 +43,7 @@ public class TopDownMovement: MonoBehaviour
     {
         if(Input.GetKeyDown("e") && col.collider.name == "Cauldron")
         {
-            Potion = col.gameObject.GetComponent<Cauldron>().currentPotion;
+            
         }
     }
 

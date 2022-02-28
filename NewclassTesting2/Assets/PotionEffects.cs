@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Effect", menuName = "Objects/Gameplay/Effects")]
-public class PotionEffects : ScriptableObject
+public class PotionEffects : MonoBehaviour
 {
-    void Effects()
+    public float damage;
+    public float healing;
+    private void Start()
     {
-
+        
+    }
+    private void Update()
+    {
+        
     }
 }

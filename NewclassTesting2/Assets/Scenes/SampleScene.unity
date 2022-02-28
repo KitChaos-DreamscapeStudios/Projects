@@ -468,7 +468,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f452bca9e7ccbe94f9bc29d19834359c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPotion: {fileID: 11400000, guid: 23819e603e8e40a40a0c7f2f689f3253, type: 2}
+  currentPotion: {fileID: 11400000, guid: 884743744b9d39d40a1e32afc19e836b, type: 2}
+  IngredientA: {fileID: 0}
+  IngredientB: {fileID: 0}
+  IngredientC: {fileID: 0}
 --- !u!1001 &7616606234256081114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,11 +546,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8541899413745148655, guid: 3a92b20e45b68774da53fa1ba49b79ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.08
+      value: -10.71
       objectReference: {fileID: 0}
     - target: {fileID: 8541899413745148655, guid: 3a92b20e45b68774da53fa1ba49b79ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: -4.94
       objectReference: {fileID: 0}
     - target: {fileID: 8541899413745148655, guid: 3a92b20e45b68774da53fa1ba49b79ba, type: 3}
       propertyPath: m_LocalPosition.z

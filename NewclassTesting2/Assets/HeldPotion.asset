@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7f2e5fac2363d14f9703f2d6cf06e1c, type: 3}
-  m_Name: Poison
+  m_Name: HeldPotion
   m_EditorClassIdentifier: 
-  helpfulness: -1
-  duration: 10
-  potionProjectile: {fileID: 8541899413745148653, guid: 3a92b20e45b68774da53fa1ba49b79ba, type: 3}
+  helpfulness: 0
+  duration: 0
+  potionProjectile: {fileID: 0}
+  effect: {fileID: 0}
