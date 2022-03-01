@@ -5,17 +5,13 @@ using UnityEngine;
 [AddComponentMenu("Genes")]
 public class Genes : MonoBehaviour
 {
-    public float speed;
+    public float speed = 3;
     public float strength;
     public float size;
     public float energyUsage;
-    float maxSpeed;
-    private void Start()
-    {
-        speed = speed - strength - size;
-    }
-    private void Update()
-    {
-        energyUsage = speed + strength + size;
-    }
+    public float eyesight = 5;
+    public float lifeSpan;
+    public float antibodies;
+    public readonly float lethargyCap = 5;
+    public readonly float lethargyMin = 1;
 }

@@ -123,120 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &83441283
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 83441285}
-  - component: {fileID: 83441284}
-  m_Layer: 0
-  m_Name: Square (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &83441284
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83441283}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!4 &83441285
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83441283}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -10.15, y: 0.11, z: 0}
-  m_LocalScale: {x: 17.271439, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &96561122
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 96561124}
-  - component: {fileID: 96561123}
-  m_Layer: 0
-  m_Name: Square (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &96561123
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96561122}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!4 &96561124
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96561122}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10.17, y: 0.26, z: 0}
-  m_LocalScale: {x: 17.271439, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &401594683
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -298,6 +184,19 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
 --- !u!61 &401594685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -344,7 +243,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &401594687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,10 +256,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!212 &401594688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -425,7 +327,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -437,6 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
+  - component: {fileID: 519420030}
   - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
@@ -453,6 +356,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd15a7467e4b57741b72f4be99e21470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -480,7 +396,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.0930552
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -509,120 +425,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &649988082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 649988084}
-  - component: {fileID: 649988083}
-  m_Layer: 0
-  m_Name: Square (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &649988083
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649988082}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!4 &649988084
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649988082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2586, y: -7.63, z: 0}
-  m_LocalScale: {x: 20.29613, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &753295773
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 753295775}
-  - component: {fileID: 753295774}
-  m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &753295774
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753295773}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!4 &753295775
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753295773}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0428, y: 7.8, z: 0}
-  m_LocalScale: {x: 20.093964, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &802054865
 GameObject:
@@ -658,7 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -685,6 +487,19 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
 --- !u!61 &802054867
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -731,7 +546,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &802054869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,10 +559,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!212 &802054870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -812,7 +630,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021159283
 GameObject:
@@ -848,7 +666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -875,6 +693,19 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
 --- !u!61 &1021159285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -921,7 +752,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1021159287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,10 +765,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!212 &1021159288
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1002,7 +836,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1069696433
 GameObject:
@@ -1038,7 +872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -1065,6 +899,19 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
 --- !u!61 &1069696435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1111,7 +958,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1069696437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1124,10 +971,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!212 &1069696438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1192,7 +1042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116641747
 GameObject:
@@ -1228,7 +1078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -1255,6 +1105,19 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
 --- !u!61 &1116641749
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1301,7 +1164,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1116641751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,10 +1177,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!212 &1116641752
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1382,7 +1248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1168663854
 GameObject:
@@ -1418,7 +1284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -1445,6 +1311,19 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
 --- !u!61 &1168663856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1491,7 +1370,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1168663858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1504,10 +1383,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!212 &1168663859
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1572,7 +1454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999407441
 GameObject:
@@ -1608,7 +1490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -1635,6 +1517,19 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
 --- !u!61 &1999407443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1681,7 +1576,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1999407445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1694,10 +1589,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!212 &1999407446
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1762,7 +1660,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2021884555
 GameObject:
@@ -1798,7 +1696,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -1825,6 +1723,19 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
 --- !u!61 &2021884557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1871,7 +1782,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2021884559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1884,10 +1795,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!212 &2021884560
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1952,7 +1866,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2142903759
 GameObject:
@@ -2039,7 +1953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2142903762
 BoxCollider2D:
@@ -2087,7 +2001,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2142903764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2100,10 +2014,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49334997ba3532945a90a5216f89908d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   strength: 0
   size: 0
   energyUsage: 0
+  eyesight: 0
+  lifeSpan: 0
+  antibodies: 0
 --- !u!114 &2142903765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2117,7 +2034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 4
-  GeneGen: 
+  UniqueGenes: 
   Letters:
   - a
   - b
@@ -2144,3 +2061,16 @@ MonoBehaviour:
   - w
   - x
   - y
+  Genes: {fileID: 0}
+  GeneValues: 
+  Child: {fileID: 0}
+  hunger: 0
+  thirst: 0
+  health: 0
+  horizontal: 0
+  vertical: 0
+  GazeDirect: {x: 0, y: 0}
+  Interactable:
+    serializedVersion: 2
+    m_Bits: 8
+  body: {fileID: 0}
